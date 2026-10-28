@@ -1,0 +1,18 @@
+{
+  "screenshot": {
+    "name": "projects/3570232672003983256/files/15926905206630221744",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/15926905206630221744:download",
+    "mimeType": "image/jpeg"
+  },
+  "id": "15926905206630221187",
+  "width": "159",
+  "height": "146",
+  "title": "log.jpeg",
+  "name": "projects/3570232672003983256/screens/15926905206630221187",
+  "theme": {},
+  "screenType": "IMAGE",
+  "isCreatedByClient": true,
+  "screenMetadata": {
+    "status": "COMPLETE"
+  }
+}

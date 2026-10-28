@@ -1,0 +1,18 @@
+SURAT PERJANJIAN KERJA SAMA (KONTRAK)
+Nomor: 045/SPK-IT/ABC/2024
+
+Pekerjaan: Pengadaan 50 Unit Laptop Operasional Kantor
+Pihak Pertama: PT ABC Solusi Pratama
+Pihak Kedua (Vendor): PT Sinar Teknologi Nusantara
+
+Rincian Kontrak:
+- Nilai Kontrak:
+  * DPP: Rp 650.000.000,- (Enam Ratus Lima Puluh Juta Rupiah)
+  * PPN (11%): Rp 71.500.000,-
+  * Total Nilai Kontrak: Rp 721.500.000,- (Tujuh Ratus Dua Puluh Satu Juta Lima Ratus Ribu Rupiah)
+- Periode Kontrak / Waktu Pelaksanaan: 1 Maret 2024 s/d 31 Mei 2024 (90 hari kalender).
+- Masa Berlaku Kontrak: Berlaku sejak tanggal 1 Maret 2024 sampai dengan 30 Juni 2024 (mencakup masa garansi dan pemeliharaan awal 30 hari kalender).
+- Skema Pembayaran:
+  1. Termin 1 (Uang Muka): 30% setelah penandatanganan kontrak (Rp 195.000.000,- belum PPN).
+  2. Termin 2: 50% setelah seluruh unit laptop diterima dan lolos uji fungsi (Rp 325.000.000,- belum PPN).
+  3. Termin 3 (Retensi): 20% setelah masa pemeliharaan selesai (Rp 130.000.000,- belum PPN).

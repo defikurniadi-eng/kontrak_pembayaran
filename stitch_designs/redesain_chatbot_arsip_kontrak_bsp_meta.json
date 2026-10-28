@@ -1,0 +1,26 @@
+{
+  "screenshot": {
+    "name": "projects/3570232672003983256/screens/21332def0e234db08d0f4261bf3d1e37/fileEntries/screenshot",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/screenshot_00065edd8c183ec607799eae432bd19e:download",
+    "mimeType": "image/png"
+  },
+  "htmlCode": {
+    "name": "projects/3570232672003983256/screens/21332def0e234db08d0f4261bf3d1e37/fileEntries/html",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/21332def0e234db08d0f4261bf3d1e37:download",
+    "mimeType": "text/html"
+  },
+  "id": "21332def0e234db08d0f4261bf3d1e37",
+  "generatedBy": "HatterAgent",
+  "width": "780",
+  "height": "1768",
+  "title": "Redesain Chatbot Arsip & Kontrak PT Bumi Siak Pusako",
+  "prompt": "Redesign this Indonesian enterprise document & contract AI assistant chatbot (\"Chatbot Arsip Dokumen & Kontrak - Berbasis RAG & Groq AI\") into a modern, highly polished, premium corporate mobile interface for \"PT Bumi Siak Pusako / skkmigas\".\n\nKey elements to include:\n1. Top Header / App Bar:\n- Incorporate the agency logo {{DATA:IMAGE:IMAGE_1}} (Bumi Siak Pusako & SKK Migas) cleanly in the header with high quality styling.\n- Clear title: \"Asisten AI Arsip & Kontrak\" with subtitle \"PT Bumi Siak Pusako \u2022 RAG & Groq AI\".\n- Status indicator pill badge: glowing green dot with text \"Sistem Aktif\" or \"Model Siap\".\n- Action icons: Reset / New Chat icon, options/info button.\n\n2. Chat Stream / Message History:\n- Date separator: \"Hari ini, 24 Mei 2024\"\n- System greeting message bubble with an elegant bot avatar (sleek AI/document badge), formatted nicely with bold highlights and clear spacing:\n  \"Halo! Saya asisten AI untuk penelusuran dokumen kontrak dan verifikasi pembayaran PT Bumi Siak Pusako. Silakan tanyakan nomor kontrak, termin pembayaran, atau nilai SPK.\"\n- User message bubble: \"Berapa nomor transaksi pembayaran termin 1?\" with timestamp 09:37 and read checkmark.\n- AI assistant reply bubble with structured, rich card layout:\n  - Text response: \"Nomor transaksi pembayaran termin 1 adalah **V-PAY/2024/03/0088**.\"\n  - Source citation / verification pill card: clickable chip icon with \"Sumber: pembayaran_045_termin_1.txt\" and \"Preview Dokumen\" link.\n  - Quick action buttons on bot reply: Copy, Thumbs up, Thumbs down, Unduh Ringkasan.\n\n3. Quick Suggestion Pills / Chips (Horizontal scrollable or neat row):\n- \"\ud83d\udcbb Kontrak Laptop\", \"\ud83c\udfe2 Sewa Gedung\", \"\ud83e\uddfe Bukti Pembayaran\", \"\ud83d\udccb Verifikasi Termin 2\" with modern border and hover/press micro-interactions.\n\n4. Input Bar at Bottom:\n- Elevated or floating bottom bar.\n- Attachment/Upload document button (paperclip icon).\n- Input field: \"Ketik pertanyaan terkait kontrak di sini...\"\n- Voice input / Mic button.\n- Primary gradient/vibrant send button with paper plane icon.\n\nVisual Design & UX Polish:\n- Theme: Professional corporate mobile app with clean white/slate-50 background, subtle enterprise blue/navy accents, sophisticated typography, soft shadows, rounded-2xl cards.\n- Mobile viewport optimized (~390px width layout feel).\n- All text in Indonesian, exactly reflecting corporate oil & gas governance standards.",
+  "name": "projects/3570232672003983256/screens/21332def0e234db08d0f4261bf3d1e37",
+  "theme": {},
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  }
+}

@@ -1,0 +1,21 @@
+# File Environment & Kunci Rahasia API
+.env
+API Key.txt
+
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Sistem Operasi
+Thumbs.db
+Desktop.ini
+.DS_Store
+

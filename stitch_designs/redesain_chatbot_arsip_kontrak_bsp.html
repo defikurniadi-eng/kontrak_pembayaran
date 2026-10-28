@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Asisten AI Arsip &amp; Kontrak - PT Bumi Siak Pusako</title>
+<!-- Tailwind CSS CDN with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font Awesome Icons for polished mobile UI -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            corporate: {
+              50: '#F0F5FF',
+              100: '#E0EBFF',
+              500: '#1D63ED',
+              600: '#0B4FD8',
+              700: '#083CA5',
+              800: '#072E7D',
+              900: '#041E53',
+            },
+            energy: {
+              green: '#10B981',
+              gold: '#F59E0B'
+            }
+          },
+          boxShadow: {
+            'floating': '0 8px 30px rgba(0, 29, 90, 0.08)',
+            'bubble': '0 2px 10px rgba(11, 79, 216, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-mobile-styling">
+    /* Native Mobile Smoothness & Safe Area Support */
+    html, body {
+      overscroll-behavior-y: none;
+      -webkit-tap-highlight-color: transparent;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* iOS safe-area insets */
+    .safe-top {
+      padding-top: env(safe-area-inset-top, 24px);
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+
+    /* Pulse wave for online indicator */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .status-pulse {
+      animation: pulse-ring 2.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased flex justify-center min-h-screen">
+<!-- BEGIN: MobileDeviceFrame -->
+<div class="w-full max-w-[430px] min-h-screen bg-slate-50 flex flex-col shadow-2xl relative border-x border-slate-200 overflow-hidden" data-purpose="mobile-viewport">
+<!-- BEGIN: TopHeader -->
+<header class="bg-white border-b border-slate-200/80 sticky top-0 z-30 shadow-sm backdrop-blur-md bg-white/95">
+<!-- Status Bar Placeholder for Mobile Shell -->
+<div class="h-3 w-full safe-top"></div>
+<!-- Top Branding Bar -->
+<div class="px-4 py-2.5 flex items-center justify-between gap-3">
+<!-- Logo & Organization Badge -->
+<div class="flex items-center gap-2.5">
+<div class="bg-white p-1 rounded-xl shadow-xs border border-slate-100 flex items-center justify-center h-10 w-auto px-1.5">
+<img alt="Logo PT Bumi Siak Pusako &amp; SKK Migas" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdAkv-IhVR4m9UEzAVisLEwCJTX2MA5Pl8eT6ngmHbJhGLf1_8Mw7-nIiRJq5lpbIul-Pi50U4yiifel1BK2gt2QcrVjDsDYA2t2zpLbIgznY6cDxpy7NFhQFj_IeQSMtnSL1_jAET1UqXIshkuS-U7p8apUU9ivXDYCLfQAbPRttg8dwggVoWNBvcDvXShTI0J75ClBPAm-bJmZorihbsib_a7aq5y4TaHXXhwQE"/>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h1 class="text-xs font-bold text-slate-900 tracking-tight leading-tight">Asisten AI Kontrak</h1>
+<span class="bg-blue-100 text-corporate-700 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider">BSP</span>
+</div>
+<p class="text-[11px] font-medium text-slate-500 flex items-center gap-1">
+<span>Arsip Digital</span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500">RAG &amp; Groq AI</span>
+</p>
+</div>
+</div>
+<!-- System Status & Actions -->
+<div class="flex items-center gap-1.5">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/70" data-purpose="status-badge">
+<span class="relative flex h-2 w-2">
+<span class="status-pulse absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-[10px] font-semibold text-emerald-700">Aktif</span>
+</div>
+<!-- Options Menu Button -->
+<button aria-label="Menu Pengaturan Chat" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-100 active:scale-95 transition-all text-xs border border-transparent hover:border-slate-200" type="button">
+<i class="fa-solid fa-arrow-rotate-right text-slate-500 text-xs"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: ChatStream -->
+<main class="flex-1 overflow-y-auto px-4 py-4 space-y-4" data-purpose="chat-scroll-area">
+<!-- Date Divider -->
+<div class="flex items-center justify-center my-1">
+<span class="px-3 py-1 bg-slate-200/70 text-slate-600 rounded-full text-[10px] font-medium tracking-wide">
+          Hari ini, 24 Mei 2024
+        </span>
+</div>
+<!-- BEGIN: BotGreetingMessage -->
+<div class="flex items-start gap-2.5 max-w-[92%]" data-purpose="ai-greeting-message">
+<!-- Avatar Bot -->
+<div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-corporate-700 to-corporate-500 flex items-center justify-center text-white text-xs shadow-md shrink-0">
+<i class="fa-solid fa-robot"></i>
+</div>
+<!-- Chat Bubble -->
+<div class="space-y-1">
+<div class="bg-white p-3.5 rounded-2xl rounded-tl-sm border border-slate-200/70 shadow-bubble text-[13px] text-slate-700 leading-relaxed space-y-2">
+<p>
+              Halo! Saya <span class="font-semibold text-slate-900">Asisten AI Dokumen &amp; Kontrak</span> PT Bumi Siak Pusako.
+            </p>
+<p class="text-slate-600">
+              Silakan tanyakan informasi seputar nomor kontrak, nilai SPK, periode pengerjaan, atau bukti realisasi termin pembayaran. Anda juga dapat memilih contoh pintasan di bawah.
+            </p>
+</div>
+<div class="flex items-center gap-1.5 px-1 text-[10px] text-slate-400">
+<span>Sistem RAG Terverifikasi</span>
+<span>•</span>
+<span>09:35</span>
+</div>
+</div>
+</div>
+<!-- END: BotGreetingMessage -->
+<!-- BEGIN: UserQueryMessage -->
+<div class="flex items-end justify-end gap-1.5 ml-auto max-w-[85%]" data-purpose="user-message">
+<div class="space-y-1 flex flex-col items-end">
+<div class="bg-corporate-600 text-white p-3.5 rounded-2xl rounded-br-sm shadow-md text-[13px] font-medium leading-relaxed">
+            Berapa nomor transaksi pembayaran termin 1?
+          </div>
+<div class="flex items-center gap-1 text-[10px] text-slate-400 px-1">
+<span>09:37</span>
+<i class="fa-solid fa-check-double text-corporate-500 text-[10px]"></i>
+</div>
+</div>
+</div>
+<!-- END: UserQueryMessage -->
+<!-- BEGIN: BotStructuredResponse -->
+<div class="flex items-start gap-2.5 max-w-[95%]" data-purpose="ai-response-message">
+<!-- Avatar Bot -->
+<div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-corporate-700 to-corporate-500 flex items-center justify-center text-white text-xs shadow-md shrink-0">
+<i class="fa-solid fa-sparkles text-[11px]"></i>
+</div>
+<!-- Rich Card Bubble -->
+<div class="space-y-2 w-full">
+<div class="bg-white p-3.5 rounded-2xl rounded-tl-sm border border-slate-200/80 shadow-bubble text-[13px] text-slate-800 space-y-3">
+<!-- Text Content -->
+<p class="leading-relaxed">
+              Nomor transaksi pembayaran termin 1 adalah <span class="font-bold text-corporate-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100 font-mono text-[12.5px]">V-PAY/2024/03/0088</span>.
+            </p>
+<!-- Metadata Box / Source Document Reference -->
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 flex items-center justify-between gap-2" data-purpose="document-source-reference">
+<div class="flex items-center gap-2 overflow-hidden">
+<div class="w-7 h-7 rounded-lg bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0">
+<i class="fa-regular fa-file-lines"></i>
+</div>
+<div class="truncate">
+<p class="text-[11px] font-semibold text-slate-800 truncate">pembayaran_045_termin_1.txt</p>
+<p class="text-[9px] text-slate-400">Arsip Keuangan Migas • Tersinkronisasi</p>
+</div>
+</div>
+<button class="shrink-0 text-[11px] text-corporate-600 font-semibold px-2 py-1 rounded bg-white hover:bg-blue-50 border border-slate-200 shadow-xs active:scale-95 transition-all">
+                Buka
+              </button>
+</div>
+<!-- Feedback & Micro Utilities Row -->
+<div class="flex items-center justify-between pt-1 border-t border-slate-100 text-slate-400 text-xs">
+<div class="flex items-center gap-2">
+<button class="hover:text-slate-700 transition-colors p-1" title="Salin Jawaban">
+<i class="fa-regular fa-copy"></i>
+</button>
+<button class="hover:text-emerald-600 transition-colors p-1" title="Jawaban Akurat">
+<i class="fa-regular fa-thumbs-up"></i>
+</button>
+<button class="hover:text-rose-600 transition-colors p-1" title="Kurang Sesuai">
+<i class="fa-regular fa-thumbs-down"></i>
+</button>
+</div>
+<span class="text-[10px] text-slate-400">Groq LLaMA-3 (0.32s)</span>
+</div>
+</div>
+<!-- Bottom Timestamp -->
+<div class="flex items-center gap-1.5 px-1 text-[10px] text-slate-400">
+<span>BSP AI Enterprise Engine</span>
+<span>•</span>
+<span>09:37</span>
+</div>
+</div>
+</div>
+<!-- END: BotStructuredResponse -->
+</main>
+<!-- END: ChatStream -->
+<!-- BEGIN: QuickSuggestionsSection -->
+<div class="px-4 py-2 border-t border-slate-200/50 bg-white/70 backdrop-blur-sm" data-purpose="quick-prompts-carousel">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Topik Cepat Dokumen</span>
+<span class="text-[10px] text-corporate-600 font-medium cursor-pointer">Lihat Semua</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-1 hide-scrollbar -mx-1 px-1">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200 hover:border-corporate-500 rounded-full text-xs font-medium text-slate-700 shadow-xs hover:text-corporate-700 active:bg-slate-50 shrink-0 transition-all" type="button">
+<span>💻</span>
+<span>Kontrak Laptop</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200 hover:border-corporate-500 rounded-full text-xs font-medium text-slate-700 shadow-xs hover:text-corporate-700 active:bg-slate-50 shrink-0 transition-all" type="button">
+<span>🏢</span>
+<span>Sewa Gedung</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200 hover:border-corporate-500 rounded-full text-xs font-medium text-slate-700 shadow-xs hover:text-corporate-700 active:bg-slate-50 shrink-0 transition-all" type="button">
+<span>🧾</span>
+<span>Bukti Pembayaran</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200 hover:border-corporate-500 rounded-full text-xs font-medium text-slate-700 shadow-xs hover:text-corporate-700 active:bg-slate-50 shrink-0 transition-all" type="button">
+<span>📋</span>
+<span>Verifikasi Termin 2</span>
+</button>
+</div>
+</div>
+<!-- END: QuickSuggestionsSection -->
+<!-- BEGIN: FloatingInputBar -->
+<footer class="bg-white p-3 border-t border-slate-200 safe-bottom" data-purpose="chat-input-controls">
+<form class="flex items-center gap-2" onsubmit="event.preventDefault();">
+<!-- Document Attachment / Scan Button -->
+<button aria-label="Unggah atau Lampirkan Dokumen Kontrak" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center shrink-0 active:scale-95 transition-all text-sm" type="button">
+<i class="fa-solid fa-paperclip"></i>
+</button>
+<!-- Text Input Field -->
+<div class="flex-1 relative flex items-center">
+<input class="w-full bg-slate-100/90 focus:bg-white text-slate-800 placeholder-slate-400 text-xs sm:text-[13px] rounded-full py-2.5 pl-3.5 pr-9 border-slate-200 focus:border-corporate-600 focus:ring-1 focus:ring-corporate-600 transition-all outline-none" placeholder="Ketik nomor kontrak atau pertanyaan..." type="text"/>
+<!-- Voice Input Trigger -->
+<button aria-label="Input Suara" class="absolute right-2.5 text-slate-400 hover:text-corporate-600 active:scale-95 transition-all text-xs" type="button">
+<i class="fa-solid fa-microphone"></i>
+</button>
+</div>
+<!-- Primary Send Button -->
+<button aria-label="Kirim Pertanyaan" class="w-10 h-10 rounded-full bg-gradient-to-r from-corporate-600 to-corporate-700 hover:from-corporate-700 hover:to-corporate-800 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20 active:scale-95 transition-all" type="submit">
+<i class="fa-solid fa-paper-plane text-xs"></i>
+</button>
+</form>
+<!-- Compliance & Security Footnote -->
+<div class="mt-2 text-center">
+<p class="text-[9px] text-slate-400 font-medium">
+          Privasi Terjamin • Khusus Dokumen Resmi PT Bumi Siak Pusako
+        </p>
+</div>
+</footer>
+<!-- END: FloatingInputBar -->
+</div>
+<!-- END: MobileDeviceFrame -->
+</body></html>

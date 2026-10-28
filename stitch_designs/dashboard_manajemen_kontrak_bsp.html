@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Enterprise - PT Bumi Siak Pusako</title>
+<!-- Tailwind CSS CDN with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bsp: {
+              green: '#4CAF50',
+              greenDark: '#388E3C',
+              greenLight: '#E8F5E9',
+              greenDeep: '#2E7D32',
+              accent: '#F9A825'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Custom Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<style data-purpose="scrollbar">
+    /* Subtle custom scrollbar for chat log */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-[#F4F6F9] text-slate-800 antialiased h-screen flex overflow-hidden">
+<!-- BEGIN: LeftSidebar -->
+<!-- Sidebar vertikal hijau khas template sistem migas sesuai referensi -->
+<aside class="w-20 bg-[#4CAF50] flex flex-col items-center py-4 flex-shrink-0 z-20 shadow-md" data-purpose="main-sidebar">
+<!-- Logo Perusahaan -->
+<div class="mb-7 flex flex-col items-center cursor-pointer group" title="PT Bumi Siak Pusako">
+<div class="w-11 h-11 rounded-full bg-white/20 p-1 flex items-center justify-center overflow-hidden border border-white/40 shadow-inner group-hover:scale-105 transition-transform duration-200">
+<img alt="Logo PT Bumi Siak Pusako" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr1OBxDBeI3cc7-Q9GtKAaLY2tjM6tdZoCikWfGdJlVlgyJfgi0HzAdazyS6uRhSGS6EpFXstssBuMfpxXq-ipHqDVsSiK_cHAdOhv1MNnqsMKFGAXRtAsWnkREVWR_r7E0jm-E3SXiY_7tT8CNfb64J0tGq6w67Cvdy12B0sHJgoXTd8Gphlp7hv5mKO7_SrZrbh76UQLqVFEDHQC9PLFkz0pN0o4m4UDsoPakjsG1Eh9oInXM5fk"/>
+</div>
+</div>
+<!-- Navigation Menu Icons -->
+<nav class="flex-1 flex flex-col gap-5 w-full items-center">
+<!-- Item: Dashboard (Active) -->
+<a class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/25 text-white shadow-sm transition-all duration-200" href="#" title="Dashboard">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Item: Dokumen & Kontrak -->
+<a class="w-12 h-12 flex items-center justify-center rounded-xl text-white/80 hover:bg-white/15 hover:text-white transition-all duration-200" href="#" title="Dokumen &amp; Kontrak">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Item: Logistik & Operasional Lapangan -->
+<a class="w-12 h-12 flex items-center justify-center rounded-xl text-white/80 hover:bg-white/15 hover:text-white transition-all duration-200" href="#" title="Logistik &amp; Transportasi">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Item: Keuangan & Realisasi Termin -->
+<a class="w-12 h-12 flex items-center justify-center rounded-xl text-white/80 hover:bg-white/15 hover:text-white transition-all duration-200" href="#" title="Keuangan &amp; Pembayaran">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Item: Asisten AI RAG -->
+<a class="w-12 h-12 flex items-center justify-center rounded-xl text-white/80 hover:bg-white/15 hover:text-white transition-all duration-200" href="#" title="Chatbot AI Dokumen">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</nav>
+<!-- Bottom Action: Pengaturan -->
+<div class="mt-auto">
+<a class="w-12 h-12 flex items-center justify-center rounded-xl text-white/70 hover:bg-white/15 hover:text-white transition-all duration-200" href="#" title="Pengaturan Sistem">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentWrapper -->
+<div class="flex-1 flex flex-col h-full overflow-hidden">
+<!-- BEGIN: TopHeader -->
+<!-- Bar navigasi atas warna putih dengan tombol hamburger dan profil pengguna -->
+<header class="h-14 bg-white border-b border-slate-200 px-6 flex items-center justify-between flex-shrink-0 z-10" data-purpose="top-header">
+<!-- Tombol Hamburger Bar Kiri -->
+<div class="flex items-center gap-4">
+<button aria-label="Toggle Menu" class="text-slate-600 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded p-1" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</button>
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-400 border-l border-slate-300 pl-4 hidden sm:inline">
+          PT BUMI SIAK PUSAKO • SKK MIGAS
+        </span>
+</div>
+<!-- Profil Pengguna Dropdown Kanan -->
+<div class="flex items-center gap-3 cursor-pointer select-none group" data-purpose="user-profile-menu">
+<!-- Avatar Bulat Abu-abu sesuai referensi gambar 1 -->
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 overflow-hidden border border-slate-300">
+<svg class="w-5 h-5 text-slate-400 mt-1" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-slate-900 transition-colors flex items-center gap-1.5">
+          developer
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</span>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: ScrollablePageContent -->
+<main class="flex-1 overflow-y-auto px-6 py-5" data-purpose="page-content">
+<!-- Judul Halaman Dashboard -->
+<h1 class="text-lg font-bold text-slate-800 tracking-wide mb-3">DASHBOARD</h1>
+<!-- Banner Notifikasi Selamat Datang (Sesuai Referensi Gambar 1) -->
+<div class="bg-[#D9EDF7] border border-[#BCE8F1] text-[#31708F] px-4 py-3 rounded-md mb-6 flex items-center justify-between text-sm shadow-sm" data-purpose="welcome-banner" id="welcome-alert">
+<div class="flex items-center gap-2">
+<!-- Ikon info lingkaran -->
+<svg class="w-4 h-4 flex-shrink-0 text-[#31708F]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>
+            Terima kasih telah login, <strong class="font-bold">developer</strong>! Semangat beraktivitas hari ini.
+          </span>
+</div>
+<button aria-label="Tutup notifikasi" class="text-[#31708F] hover:text-slate-800 focus:outline-none p-1" onclick="document.getElementById('welcome-alert').style.display='none'" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- BEGIN: MetricSummaryCards -->
+<!-- 4 Ringkasan Metrik KPI Enterprise -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6" data-purpose="kpi-cards">
+<!-- KPI 1: Dokumen Dikelola -->
+<div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Dokumen Arsip</span>
+<div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="text-2xl font-bold text-slate-800 mb-1">1,428</div>
+<div class="flex items-center text-xs text-emerald-600 font-medium gap-1">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>+12.4% bulan ini</span>
+</div>
+</div>
+<!-- KPI 2: Realisasi Pembayaran -->
+<div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Realisasi Pembayaran</span>
+<div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="text-2xl font-bold text-slate-800 mb-1">Rp 48,75 M</div>
+<div class="flex items-center text-xs text-blue-600 font-medium gap-1">
+<span>94.2% termin terserap</span>
+</div>
+</div>
+<!-- KPI 3: Kontrak Berjalan -->
+<div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Kontrak &amp; SPK Aktif</span>
+<div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="text-2xl font-bold text-slate-800 mb-1">86 <span class="text-sm font-normal text-slate-500">Kontrak</span></div>
+<div class="flex items-center text-xs text-amber-600 font-medium gap-1">
+<span>14 verifikasi termin pending</span>
+</div>
+</div>
+<!-- KPI 4: Performa RAG & Groq AI -->
+<div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Akurasi RAG AI Vector</span>
+<div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="text-2xl font-bold text-slate-800 mb-1">99.4%</div>
+<div class="flex items-center text-xs text-indigo-600 font-medium gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Latency ~320ms (Groq AI)</span>
+</div>
+</div>
+</section>
+<!-- END: MetricSummaryCards -->
+<!-- BEGIN: FilterToolbar -->
+<!-- Panel Filter Data Dokumen & Kontrak -->
+<section class="bg-white border border-slate-200 rounded-lg p-3.5 mb-6 shadow-sm flex flex-wrap items-center justify-between gap-3" data-purpose="filter-bar">
+<div class="flex flex-wrap items-center gap-3 flex-1 min-w-[280px]">
+<!-- Input Search No Kontrak -->
+<div class="relative flex-1 min-w-[200px] max-w-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="w-full text-xs pl-9 pr-3 py-2 border border-slate-300 rounded-md focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Cari No. Kontrak, Vendor, atau SPK..." type="text"/>
+</div>
+<!-- Filter Kategori -->
+<select class="text-xs py-2 px-3 border border-slate-300 rounded-md bg-white text-slate-700 focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
+<option>Semua Kategori Dokumen</option>
+<option>Kontrak Sewa &amp; Fasilitas</option>
+<option>Pengadaan TI &amp; Laptop</option>
+<option>Konstruksi &amp; Operasi Migas</option>
+<option>Bukti Realisasi Pembayaran</option>
+</select>
+<!-- Periode Tanggal -->
+<div class="flex items-center gap-1.5 text-xs text-slate-600 bg-slate-50 border border-slate-300 rounded-md px-3 py-2">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Mei 2024</span>
+</div>
+</div>
+<!-- Tombol Aksi Toolbar -->
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-md transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Terapkan</span>
+</button>
+<button class="px-3 py-2 border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-medium rounded-md transition-colors flex items-center gap-1" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Export XLS</span>
+</button>
+</div>
+</section>
+<!-- END: FilterToolbar -->
+<!-- BEGIN: MainTwoColumnGrid -->
+<!-- 2 Kolom: Kiri (65%) Tabel Kontrak & Pembayaran | Kanan (35%) Widget Chatbot RAG -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" data-purpose="dashboard-grid">
+<!-- KOLOM KIRI: Daftar Kontrak & Pembayaran (12 -> 7 / 8 cols) -->
+<div class="lg:col-span-7 xl:col-span-8 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden flex flex-col" data-purpose="contract-table-container">
+<div class="px-5 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50/50">
+<div>
+<h2 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Daftar Kontrak &amp; Status Realisasi Termin</h2>
+<p class="text-xs text-slate-500 mt-0.5">Ringkasan arsip kontrak aktif PT Bumi Siak Pusako</p>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+              Sinkron Real-time
+            </span>
+</div>
+<!-- Tabel Kontrak Responsif -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead class="bg-slate-100/80 text-slate-600 font-semibold border-b border-slate-200 uppercase tracking-wider text-[11px]">
+<tr>
+<th class="py-3 px-4">No. Kontrak / SPK</th>
+<th class="py-3 px-4">Judul Pengadaan &amp; Vendor</th>
+<th class="py-3 px-4 text-right">Nilai Kontrak</th>
+<th class="py-3 px-4 text-center">Status Pembayaran</th>
+<th class="py-3 px-4 text-center">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-slate-700">
+<!-- Baris 1: Sesuai data chatbot referensi -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3.5 px-4 font-mono font-semibold text-blue-700">
+                    V-PAY/2024/03/0088
+                    <div class="text-[10px] font-sans font-normal text-slate-400">Termin 1 (Selesai)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-slate-800">Pengadaan Laptop &amp; IT PT BSP</div>
+<div class="text-slate-400 text-[11px]">PT Sentra Digital Solusindo</div>
+</td>
+<td class="py-3.5 px-4 text-right font-medium">
+                    Rp 350.000.000
+                    <div class="text-[10px] text-emerald-600">Terbayar: Rp 175.000.000</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-100 text-emerald-800 border border-emerald-200">
+                      Termin 1 Dibayar
+                    </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="text-emerald-700 hover:text-emerald-900 font-medium hover:underline text-[11px]" type="button">
+                      Detail ›
+                    </button>
+</td>
+</tr>
+<!-- Baris 2 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3.5 px-4 font-mono font-semibold text-slate-800">
+                    KTR-2024-SW-012
+                    <div class="text-[10px] font-sans font-normal text-slate-400">Tahunan (2024-2025)</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-slate-800">Sewa Gedung Operasional Siak</div>
+<div class="text-slate-400 text-[11px]">PT Riau Graha Nusantara</div>
+</td>
+<td class="py-3.5 px-4 text-right font-medium">
+                    Rp 1.200.000.000
+                    <div class="text-[10px] text-emerald-600">Lunas 100%</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-blue-100 text-blue-800 border border-blue-200">
+                      Lunas Penuh
+                    </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="text-emerald-700 hover:text-emerald-900 font-medium hover:underline text-[11px]" type="button">
+                      Detail ›
+                    </button>
+</td>
+</tr>
+<!-- Baris 3 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3.5 px-4 font-mono font-semibold text-slate-800">
+                    KTR-2024-MIG-088
+                    <div class="text-[10px] font-sans font-normal text-slate-400">SPK Fisik Lapangan</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-slate-800">Maintenance Pompa Lapangan Minas</div>
+<div class="text-slate-400 text-[11px]">PT Pusako Tehnik Mandiri</div>
+</td>
+<td class="py-3.5 px-4 text-right font-medium">
+                    Rp 4.850.000.000
+                    <div class="text-[10px] text-amber-600">Progres 45%</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-amber-100 text-amber-800 border border-amber-200">
+                      Verifikasi SPK
+                    </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="text-emerald-700 hover:text-emerald-900 font-medium hover:underline text-[11px]" type="button">
+                      Detail ›
+                    </button>
+</td>
+</tr>
+<!-- Baris 4 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3.5 px-4 font-mono font-semibold text-slate-800">
+                    KTR-2024-LOG-041
+                    <div class="text-[10px] font-sans font-normal text-slate-400">Termin 2 Berjalan</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-semibold text-slate-800">Pengadaan Pipa Bor &amp; Casing Drill</div>
+<div class="text-slate-400 text-[11px]">PT Petro Logistik Riau</div>
+</td>
+<td class="py-3.5 px-4 text-right font-medium">
+                    Rp 8.120.000.000
+                    <div class="text-[10px] text-slate-500">Termin 1 Selesai</div>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-purple-100 text-purple-800 border border-purple-200">
+                      Termin 2 Review
+                    </span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<button class="text-emerald-700 hover:text-emerald-900 font-medium hover:underline text-[11px]" type="button">
+                      Detail ›
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Tabel -->
+<div class="px-5 py-3 border-t border-slate-200 bg-slate-50 flex items-center justify-between text-xs text-slate-500">
+<span>Menampilkan 4 dari 86 kontrak terarsip</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded border border-slate-300 bg-white hover:bg-slate-100 disabled:opacity-50" disabled="">Sebelumnya</button>
+<button class="px-2 py-1 rounded bg-emerald-600 text-white font-medium">1</button>
+<button class="px-2 py-1 rounded border border-slate-300 bg-white hover:bg-slate-100">2</button>
+<button class="px-2 py-1 rounded border border-slate-300 bg-white hover:bg-slate-100">3</button>
+<button class="px-2 py-1 rounded border border-slate-300 bg-white hover:bg-slate-100">Selanjutnya</button>
+</div>
+</div>
+</div>
+<!-- KOLOM KANAN: Widget Chatbot Arsip Dokumen & Kontrak (Persis sesuai referensi Gambar 5) -->
+<div class="lg:col-span-5 xl:col-span-4 bg-white rounded-xl border border-slate-200 shadow-md flex flex-col overflow-hidden" data-purpose="rag-chatbot-widget">
+<!-- Chatbot Header (Biru khas tampilan chatbot referensi) -->
+<div class="bg-[#1976D2] p-4 text-white flex items-center justify-between flex-shrink-0">
+<div>
+<h3 class="font-bold text-sm tracking-wide">Chatbot Arsip Dokumen &amp; Kontrak</h3>
+<p class="text-[11px] text-blue-100 font-light mt-0.5">Berbasis RAG &amp; Groq AI (Lokal &amp; Cepat)</p>
+</div>
+<div class="flex items-center gap-1.5 bg-[#43A047] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-inner">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span>Sistem Aktif</span>
+</div>
+</div>
+<!-- Chat Conversation Log -->
+<div class="p-4 flex-1 space-y-4 max-h-[380px] overflow-y-auto custom-scrollbar bg-slate-50/40 text-xs" id="chat-messages">
+<!-- Pesan Sambutan Sistem (AI) -->
+<div class="flex flex-col items-start gap-1">
+<div class="bg-[#EEF2F6] text-slate-800 rounded-2xl rounded-tl-sm p-3.5 max-w-[90%] leading-relaxed shadow-sm">
+<p class="mb-2">Halo! Saya asisten AI untuk dokumen kontrak dan pembayaran Anda.</p>
+<p>Silakan tanyakan informasi seputar nomor kontrak, nilai, periode, atau bukti realisasi pembayaran. Anda juga bisa mengeklik contoh pertanyaan di bawah.</p>
+</div>
+<span class="text-[10px] text-slate-400 pl-1">Sistem</span>
+</div>
+<!-- Pesan Pengguna -->
+<div class="flex flex-col items-end gap-1">
+<div class="bg-[#1976D2] text-white rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] shadow-sm leading-relaxed">
+                Berapa nomor transaksi pembayaran termin 1?
+              </div>
+<span class="text-[10px] text-slate-400 pr-1">09:37</span>
+</div>
+<!-- Jawaban AI dengan Sitasi Dokumen -->
+<div class="flex flex-col items-start gap-1">
+<div class="bg-[#EEF2F6] text-slate-800 rounded-2xl rounded-tl-sm p-3.5 max-w-[90%] leading-relaxed shadow-sm">
+<p class="mb-1">
+                  Nomor transaksi pembayaran termin 1 adalah <span class="font-bold text-slate-900">**V-PAY/2024/03/0088**</span>.
+                </p>
+<div class="mt-2 pt-2 border-t border-slate-300/60 flex items-center justify-between text-[11px] text-slate-600">
+<span class="flex items-center gap-1 text-slate-500">
+<svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                    Sumber: <code class="font-mono bg-white px-1 py-0.5 rounded border border-slate-200 text-slate-700">pembayaran_045_termin_1.txt</code>
+</span>
+</div>
+</div>
+<span class="text-[10px] text-slate-400 pl-1">09:37</span>
+</div>
+</div>
+<!-- Chips / Quick Prompt Shortcuts persis Gambar 5 -->
+<div class="px-4 py-2 bg-white border-t border-slate-100 flex items-center gap-2 overflow-x-auto">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 text-[11px] text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-colors whitespace-nowrap shadow-xs" onclick="fillChat('Cek dokumen Kontrak Laptop')" type="button">
+<span>💻</span> Kontrak Laptop
+            </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 text-[11px] text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-colors whitespace-nowrap shadow-xs" onclick="fillChat('Status pembayaran Sewa Gedung Siak')" type="button">
+<span>🏢</span> Sewa Gedung
+            </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 text-[11px] text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-colors whitespace-nowrap shadow-xs" onclick="fillChat('Cari Bukti Pembayaran termin 1')" type="button">
+<span>💰</span> Bukti Pembayaran
+            </button>
+</div>
+<!-- Chat Input Bar -->
+<div class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+<input class="flex-1 text-xs px-4 py-2 border border-slate-300 rounded-full focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 placeholder-slate-400" id="chat-input" placeholder="Ketik pertanyaan Anda di sini..." type="text"/>
+<button class="px-5 py-2 bg-[#1976D2] hover:bg-blue-700 text-white text-xs font-semibold rounded-full shadow-sm transition-colors flex items-center justify-center" onclick="handleSendChat()" type="button">
+              Kirim
+            </button>
+</div>
+</div>
+</section>
+<!-- END: MainTwoColumnGrid -->
+<!-- Footer Hak Cipta Enterprise -->
+<footer class="mt-8 py-4 border-t border-slate-200 text-center text-xs text-slate-400">
+        © 2024 PT Bumi Siak Pusako - Badan Usaha Milik Daerah (BUMD) Pengelola Wilayah Kerja Coastal Plains and Pekanbaru (CPP Block) bekerjasama dengan SKK Migas.
+      </footer>
+</main>
+<!-- END: ScrollablePageContent -->
+</div>
+<!-- END: MainContentWrapper -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="chat-interaction">
+    function fillChat(text) {
+      const input = document.getElementById('chat-input');
+      if (input) {
+        input.value = text;
+        input.focus();
+      }
+    }
+
+    function handleSendChat() {
+      const input = document.getElementById('chat-input');
+      const messagesContainer = document.getElementById('chat-messages');
+      if (!input || !input.value.trim() || !messagesContainer) return;
+
+      const userText = input.value.trim();
+      input.value = '';
+
+      // Append user bubble
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      
+      const userBubble = `
+        <div class="flex flex-col items-end gap-1">
+          <div class="bg-[#1976D2] text-white rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-[85%] shadow-sm leading-relaxed">
+            ${userText}
+          </div>
+          <span class="text-[10px] text-slate-400 pr-1">${timeStr}</span>
+        </div>
+      `;
+      messagesContainer.insertAdjacentHTML('beforeend', userBubble);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+      // Simulated instant AI answer
+      setTimeout(() => {
+        const aiBubble = `
+          <div class="flex flex-col items-start gap-1">
+            <div class="bg-[#EEF2F6] text-slate-800 rounded-2xl rounded-tl-sm p-3.5 max-w-[90%] leading-relaxed shadow-sm">
+              <p class="mb-1">Informasi untuk pencarian: <span class="font-semibold text-blue-700">"${userText}"</span> berhasil ditemukan dalam basis vektor RAG arsip.</p>
+              <div class="mt-2 pt-2 border-t border-slate-300/60 flex items-center justify-between text-[11px] text-slate-600">
+                <span class="flex items-center gap-1 text-slate-500">
+                  <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Sumber: <code class="font-mono bg-white px-1 py-0.5 rounded border border-slate-200 text-slate-700">kontrak_arsip_2024_verifikasi.pdf</code>
+                </span>
+              </div>
+            </div>
+            <span class="text-[10px] text-slate-400 pl-1">${timeStr}</span>
+          </div>
+        `;
+        messagesContainer.insertAdjacentHTML('beforeend', aiBubble);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }, 400);
+    }
+
+    // Allow Enter key to trigger send
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('chat-input');
+      if (input) {
+        input.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            handleSendChat();
+          }
+        });
+      }
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

@@ -1,0 +1,18 @@
+{
+  "screenshot": {
+    "name": "projects/3570232672003983256/files/15926905206630220630",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/15926905206630220630:download",
+    "mimeType": "image/png"
+  },
+  "id": "15926905206630220073",
+  "width": "821",
+  "height": "604",
+  "title": "Chatbot_tampilan.png",
+  "name": "projects/3570232672003983256/screens/15926905206630220073",
+  "theme": {},
+  "screenType": "IMAGE",
+  "isCreatedByClient": true,
+  "screenMetadata": {
+    "status": "COMPLETE"
+  }
+}

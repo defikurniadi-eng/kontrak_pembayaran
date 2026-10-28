@@ -1,0 +1,13 @@
+BUKTI REALISASI PEMBAYARAN VENDOR
+Nomor Transaksi: V-PAY/2024/03/0088
+
+Data Pembayaran:
+- Nomor Referensi Kontrak: 045/SPK-IT/ABC/2024
+- Nama Pekerjaan: Pengadaan 50 Unit Laptop Operasional Kantor
+- Nama Penerima (Vendor): PT Sinar Teknologi Nusantara
+- Keterangan Pembayaran: Pembayaran Termin 1 (Uang Muka 30%)
+- Nilai Realisasi Pembayaran: Rp 195.000.000,- (Seratus Sembilan Puluh Lima Juta Rupiah)
+- Tanggal Pembayaran: 15 Maret 2024
+- Metode Pembayaran: Transfer Bank Mandiri (No. Rek: 123-00-9876543-1)
+- Status: LUNAS / BERHASIL
+

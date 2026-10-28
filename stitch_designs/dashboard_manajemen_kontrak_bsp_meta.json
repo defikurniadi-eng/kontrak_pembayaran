@@ -1,0 +1,26 @@
+{
+  "screenshot": {
+    "name": "projects/3570232672003983256/screens/a0feaae0f9864b16bea44c88611da401/fileEntries/screenshot",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/screenshot_00065eddb72eda4602d3c21c150eb3b7:download",
+    "mimeType": "image/png"
+  },
+  "htmlCode": {
+    "name": "projects/3570232672003983256/screens/a0feaae0f9864b16bea44c88611da401/fileEntries/html",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/3570232672003983256/files/a0feaae0f9864b16bea44c88611da401:download",
+    "mimeType": "text/html"
+  },
+  "id": "a0feaae0f9864b16bea44c88611da401",
+  "generatedBy": "HatterAgent",
+  "width": "2560",
+  "height": "2048",
+  "title": "Dashboard Manajemen Kontrak & AI Chatbot PT Bumi Siak Pusako",
+  "prompt": "Buat sebuah antarmuka Web Dashboard Desktop perusahaan enterprise (PT Bumi Siak Pusako / SKK Migas) dengan tata letak persis mengikuti struktur template pada referensi {{DATA:IMAGE:IMAGE_1}} (sesuai_tampilan.png):\n1. **Sidebar Navigasi Kiri (Hijau #4CAF50 / #43A047)**:\n   - Di bagian atas sidebar terdapat lambang/logo PT Bumi Siak Pusako (menggunakan {{DATA:IMAGE:IMAGE_4}}).\n   - Ikon menu vertikal bersih warna putih/transparan: Dashboard (aktif), Dokumen & Kontrak, Logistik/Pengiriman, Keuangan & Pembayaran, Pengaturan.\n2. **Top Header Bar**:\n   - Background putih dengan tombol toggle hamburger icon di kiri.\n   - Di kanan: Profil pengguna dengan avatar dan teks dropdown \"developer \u2335\".\n3. **Area Konten Utama (Dashboard)**:\n   - Judul halaman tebal: **DASHBOARD**.\n   - Banner notifikasi/alert warna biru muda lembut persis di referensi {{DATA:IMAGE:IMAGE_1}}:\n     \"\u24d8 Terima kasih telah login, **developer**! Semangat beraktivitas hari ini. [\u2715]\"\n4. **Metrik Ringkasan Utama (KPI Cards)**:\n   - Card 1: **Total Dokumen Dikelola** (misal: 1,428 Dokumen - badge kenaikan +12% bulan ini, ikon berkas).\n   - Card 2: **Total Pembayaran Terealisasi** (misal: Rp 48,75 Miliar - badge termin lancar 94%, ikon rupiah/finance).\n   - Card 3: **Kontrak Berjalan & Termin Aktif** (misal: 86 Kontrak Aktif, 14 Menunggu Verifikasi).\n   - Card 4: **Akurasi RAG AI Assistant** (misal: 99.4% Verifikasi Dokumen Instan).\n5. **Panel Filter Tanggal & Kategori Dokumen**:\n   - Filter bar terpadu yang modern: Rentang Tanggal (Datepicker preset: 'Bulan Ini (Mei 2024)', filter kategori: Semua Kategori / Kontrak Sewa / Pengadaan TI & Laptop / Konstruksi & Migas / Termin Pembayaran), input pencarian nomor dokumen/SPK, dan tombol \"Terapkan Filter\" & \"Export Laporan\".\n6. **Dua Kolom Konten Utama (Layout Grid Responsif Desktop)**:\n   - **Kolom Kiri (65% lebar): Daftar Kontrak & Status Pembayaran**:\n     - Tabel interaktif enterprise: Kolom No. Kontrak / SPK, Judul & Vendor, Nilai Kontrak, Termin Terbayar, Status Pembayaran (Lunas, Termin 1 Selesai, Menunggu Verifikasi SPK), dan tombol Aksi / Detail.\n     - Contoh data: V-PAY/2024/03/0088 (Pengadaan Laptop & IT PT BSP), KTR-2024-SW-012 (Sewa Gedung Operasional Siak), KTR-2024-MIG-088 (Maintenance Pompa Lapangan), dll.\n   - **Kolom Kanan (35% lebar): Widget Asisten AI Chatbot Arsip RAG Terintegrasi**:\n     - Desain panel chatbot elegan terinspirasi dari {{DATA:IMAGE:IMAGE_5}} dengan header biru/hijau korporat, indikator \"\u25cf Sistem Aktif (RAG & Groq AI)\".\n     - Riwayat percakapan: Sambutan asisten AI, pertanyaan pengguna \"Berapa nomor transaksi pembayaran termin 1?\", dan jawaban AI memunculkan \"V-PAY/2024/03/0088\" beserta kartu sitasi file rujukan 'pembayaran_045_termin_1.txt' lengkap dengan tombol buka dokumen.\n     - Pintasan cepat (Chips: 'Kontrak Laptop', 'Sewa Gedung', 'Bukti Pembayaran').\n     - Input chat di bagian bawah dengan tombol lampiran arsip dan tombol Kirim.\n\nDesain harus terlihat sangat profesional, elegan, bersih, khas dashboard enterprise migas Indonesia dengan tipografi rapi, nuansa hijau dan putih sesuai template referensi.",
+  "name": "projects/3570232672003983256/screens/a0feaae0f9864b16bea44c88611da401",
+  "theme": {},
+  "deviceType": "DESKTOP",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  }
+}
